@@ -8,7 +8,7 @@ permissions:
 jobs:
   fast-forward-merge:
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/lgtm')
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     steps:
       - name: Fast Forward PR
         id: ff-action
